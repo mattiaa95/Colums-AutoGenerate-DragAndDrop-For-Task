@@ -1,0 +1,47 @@
+table{
+  width: 100%;
+  table-layout: fixed;
+  text-align: center !important;
+}
+
+td{
+  border: 1px solid black;
+  height: 34px;
+}
+
+.hour-overlay{
+  height: 34px;
+}
+
+tr{
+  width: 100%;
+}
+
+.hours{
+  width: 5%;
+}
+
+.taskers-header{
+  width: 100%;
+  display: flex;
+  position: absolute;
+  z-index: 1000;
+}
+
+.taskers-list{
+  width: 100%;
+  height: 784px;
+  padding: 2px;
+}
+
+.taskers-lists{
+  display:flex;
+  width: 100%;
+  margin-left: 2px;
+}
+
+.example-box {
+  box-sizing: border-box;
+  cursor: move;
+  background: beige;
+}

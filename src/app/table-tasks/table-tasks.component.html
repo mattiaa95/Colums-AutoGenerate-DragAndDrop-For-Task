@@ -1,0 +1,35 @@
+<table>
+  <tr>
+    <td class="hours"></td>
+
+    <td *ngFor="let tasker of taskers">
+      {{tasker.name}}
+    </td>
+  </tr>
+
+  <div cdkDropListGroup class="taskers-header">
+    <div class="hours"></div>
+    <div class="taskers-lists">
+      <div *ngFor="let tasker of taskers" class="taskers-list">
+        <div cdkDropList class="hour-overlay" *ngFor="let hour of hours" id="{{hour+tasker.name}}" (cdkDropListDropped)="drop($event)">
+
+          <div *ngFor="let task of tasker.tasks">
+            <div mwlResizable [enableGhostResize]="true" [resizeEdges]="{bottom: true, right: false, top: false, left: false}"
+              [resizeSnapGrid]="{bottom: 34}" (resizeEnd)="onResizeEnd($event,task.id)" class="example-box" id="{{task.id}}"
+              *ngIf="task.start == hour" [ngStyle]="setMyStyles(task.start,task.end)" cdkDrag>
+              <p>Reserva: {{ task.id }}</p>
+              <p>{{task.type}}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <tr *ngFor="let hour of hours">
+    <td class="hours">{{hour}}</td>
+    <td *ngFor="let tasker of taskers">
+    </td>
+  </tr>
+</table>
