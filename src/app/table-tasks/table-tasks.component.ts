@@ -9,7 +9,7 @@ import { CdkDragDrop, CdkDropListContainer } from '@angular/cdk/drag-drop';
 })
 
 /**
- * @author Mattia La Spina <mattiaa@gmail.com>
+ * @author Mattia La Spina <mattiaa95@gmail.com>
  */
 export class TableTasksComponent {
 
